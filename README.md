@@ -21,8 +21,8 @@ Estudando Flutter com foco na criação de Apps mobiles para ios e Android
 
 ## Backend 
 
-[ ] Javascript/OPP
-[ ] Node.js
-[ ] Banco Relacional
-[ ] Banco Ñ Relacional
-[ ] CI/CD
+- [ ] Javascript/OPP
+- [ ] Node.js
+- [ ] Banco Relacional
+- [ ] Banco Ñ Relacional
+- [ ] CI/CD
