@@ -28,4 +28,5 @@ Estudando Flutter com foco na criação de Apps mobiles para ios e Android
 - [ ] Banco Ñ Relacional
 - [ ] Teste em JavaScript
 - [ ] Testes automatizados em JavaScript
+- [ ] Docker
 - [ ] CI/CD
