@@ -1,5 +1,5 @@
 void main(List<String> args) {
-  /* List numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+   List numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   for (var numero in numeros) {
     print((numero % 2 == 0) ? "true" : "false");
@@ -12,7 +12,7 @@ void main(List<String> args) {
   for (var i = 0; i < numeros.length; i++) {
     print(numeros.contains(i));
   }
- */
+
   int x = 0;
 
   List nomes = [];
