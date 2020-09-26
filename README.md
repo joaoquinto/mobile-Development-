@@ -10,7 +10,7 @@
 
 ### Horário de Estudo
 
-17:00PM até 19:00PM
+3 horas de estudo. Nos dias de folga. 
 
 
 
