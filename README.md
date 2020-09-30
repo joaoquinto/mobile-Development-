@@ -18,12 +18,19 @@ Estudando Flutter com foco na criação de Apps mobiles para ios e Android
 
 ![alt](https://raw.githubusercontent.com/joaoquinto/flutter-development-roadmap/master/docs/flutter-app-development-roadmap-by-tarikul.png)
 
+## Mobile
 
+- [ ] Widgets
+- [ ] Material Desing
+- [ ] Flare
+- [ ] Teste Widgets
+- [ ] Responsividade
 
 ## Backend 
 
 - [ ] Javascript/OPP
 - [ ] Node.js
+- [ ] FireBase
 - [ ] Banco Relacional
 - [ ] Banco Ñ Relacional
 - [ ] Teste em JavaScript
