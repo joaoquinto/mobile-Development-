@@ -8,6 +8,7 @@ void main() {
   print(calcArea(5));
 
   criarBotao("BotãoSair", botao, cor: "Preto", largura: 26.0);
+  criarBotao("texto", botao, largura: 1);
 }
 
 void printIntro() {
@@ -30,7 +31,7 @@ double calcArea(double raio) {
 
 // Parametros Opcicionais
 void criarBotao(String texto, Function criadoFunc,
-    {String cor, double largura}) {
+    {String cor = "cinza", double largura}) {
   print(texto);
   print(cor ?? "Preto");
   print(largura ?? 10);
