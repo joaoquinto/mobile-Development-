@@ -7,6 +7,6 @@ switch (nome) {
     case "Marcos":
         console.log("MARCOSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS");
     default:
-        console.log("FUCKY YOUR SELF NIGGA");
+        console.log("Errou");
         break;
 }
