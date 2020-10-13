@@ -74,6 +74,111 @@ Stack()
 ```
 
 
+### FutureBuilder 
+
+```dart
+/* O FutureBuilder() serve para apresentar algo enquanto 
+      o seu aplicativo esta criando algo ou pegando dados de uma API*/
+      body: FutureBuilder<Map>(
+          // Diz qual future metodo usar
+          future: quotation.getData(),
+          // Faz as condicionais para cada callback utilizando ConnectionState
+          //Função que irá usar o FutureBuilder
+          builder: (context, snapshot) {
+            switch (snapshot.connectionState) {
+              case ConnectionState.none:
+              case ConnectionState.waiting:
+                return Center(
+                  child: Text(
+                    "Carregando Dados...",
+                    style: TextStyle(
+                      color: Colors.amber,
+                      fontSize: 25,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                );
+              //Em caso de não precisar carregar ele exibira isso
+              default:
+                if (snapshot.hasError) {
+                  return Center(
+                    child: Text(
+                      "Erro ao Carregar Dados...",
+                      style: TextStyle(
+                        color: Colors.amber,
+                        fontSize: 25,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  );
+                } else {
+                  // Envia a resposta do json para a classe
+                  quotation.dolar =
+                      snapshot.data["results"]["currencies"]["USD"]["buy"];
+                  quotation.euro =
+                      snapshot.data["results"]["currencies"]["EUR"]["buy"];
+                  return Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: SingleChildScrollView(
+                        child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        Icon(
+                          Icons.monetization_on,
+                          size: 120,
+                          color: Colors.amber,
+                        ),
+                        buildTextField("Reais", "R", quotation.realController,
+                            quotation.realChanged),
+                        buildTextField("Dólar", "US", quotation.dolarController,
+                            quotation.dolarChanged),
+                        buildTextField("Euro", "€", quotation.euroController,
+                            quotation.euroChanged),
+                      ],
+                    )),
+                  );
+                }
+            }
+          }),
+```
+
+### Widget Functio
+
+```dart
+import 'package:flutter/material.dart';
+
+Widget buildTextField(String label, String prefix,
+    TextEditingController tController, Function method) {
+  return Padding(
+    padding: const EdgeInsets.all(8.0),
+    child: TextField(
+      controller: tController,
+      keyboardType: TextInputType.number,
+      cursorColor: Colors.amber,
+      style: TextStyle(color: Colors.amber),
+      decoration: InputDecoration(
+        labelText: "$label",
+        labelStyle: TextStyle(color: Colors.amber),
+        border: OutlineInputBorder(),
+        // Modifica o prefix dependendo da entrada
+        prefixText: "${prefix == "€" ? prefix : "$prefix\$"}",
+        prefixIcon: Icon(
+          Icons.attach_money,
+          color: Colors.amber,
+        ),
+      ),
+      onChanged: method,
+    ),
+  );
+}
+
+// chamada da Widget Functio
+  buildTextField("Reais", "R", quotation.realController,
+                            quotation.realChanged),
+```
+
+
+
 ## Atributos de Widgets
 
 ### MaxAxisAlignment
@@ -105,3 +210,22 @@ Stack()
       _people += delta;
     });
 ```
+
+## Consumo de API
+
+### Get 
+
+```dart
+// Uma das formas.
+
+// Url com a key
+  final request =
+      'https://api.hgbrasil.com/finance?format=json-cors&key=c1a90dfd';
+
+// Future metodo que pega a string e lê o json
+  Future<Map> getData() async {
+    http.Response response = await http.get(request);
+    return json.decode(response.body);
+  }
+```
+
