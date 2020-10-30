@@ -11,6 +11,7 @@
 ### Horário de Estudo
 
 3 horas de estudo. Nos dias de folga. FLUTTER
+
 4 horas de estudo. Seg a Sex. WEB
 
 
