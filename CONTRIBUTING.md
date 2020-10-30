@@ -1,6 +1,6 @@
 # Contribuindo
 
-1. Faça o fork <https://gitlab.com/joaoquinto/mobile-development.git>
+1. Faça o fork <https://github.com/joaoquinto/Development.git>
 2. Crie a branch da sua feature (`git checkout -b feature/name`)
 3. Commit suas mudanças (`git commit -am ':sparkles: Add feature x'`)
 4. Faça push para branch (`git push origin feature/name`)
