@@ -3,14 +3,13 @@
 
 ## Calendário de Estudos
 
-|WEEK|SEG|TER|QUAR|QUIN|SEX||
-|---|---|---|---|---|---|---|
-|1|FLUTTER|FLUTTER|FLUTTER|FLUTTER|FLUTTER||
-|2|WEB|WEB|WEB|WEB|WEB||
+|SEG|TER|QUAR|QUIN|SEX|SAB|
+|---|---|---|---|---|---|---|---|
+|WEB|WEB|WEB|WEB|WEB|FLUTTER|
 
 ### Horário de Estudo
 
-3 horas de estudo. Nos dias de folga. FLUTTER
+4 horas de estudo. Nos sábados. FLUTTER
 
 4 horas de estudo. Seg a Sex. WEB
 
