@@ -1,0 +1,13 @@
+# Principais Estilos de UI na Web
+
+## Skeumorfismo
+
+- Faz referência a objetos reias no meio digital.
+
+## Flat Design
+
+- Utiliza cores chapadas, elimina sombras e texturas.
+
+## Material Design
+
+- Mantém o flat, mas se aproveita da possibilidade de um ambiente 3d digital.
