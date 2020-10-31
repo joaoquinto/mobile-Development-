@@ -1,8 +1,8 @@
 # Etapas para contrução de um site
 
-![Diagrama de Jesse](https://raw.githubusercontent.com/joaoquinto/Development/master/web/primeirosPassos/img/diagramadejesse.png?token=AK4FLHMBEJNJXFLIQ2PO2JS7TWOU2)
+![Diagrama de Jesse](https://github.com/joaoquinto/Development/blob/master/web/primeirosPassos/img/diagramadejesse.png)
 
-![Diagrama byOrigamid](https://raw.githubusercontent.com/joaoquinto/Development/master/web/primeirosPassos/img/byorigamid.png?token=AK4FLHLCG46PJUIBOJFHO2C7TWOXQ)
+![Diagrama byOrigamid](https://github.com/joaoquinto/Development/blob/master/web/primeirosPassos/img/byorigamid.png)
 
 ## Briefing 
 
