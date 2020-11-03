@@ -16,8 +16,16 @@ class Task {
     return _toDoList;
   }
 
+// O error era na forma do this.toDoList
+
+/*
+ERRADO
   set toDoList(List toDoList) {
     this._toDoList = _toDoList;
+  }
+  */
+  set toDoList(List toDoList) {
+    this._toDoList = toDoList;
   }
 
   /* 
