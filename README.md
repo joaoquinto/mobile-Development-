@@ -1,5 +1,4 @@
-# Mobile Development
-
+# Development
 
 ## Calendário de Estudos
 
@@ -17,6 +16,7 @@ Seg a Sex
 
 WEB.
 
+---
 4 horas de estudo
 
 Nos sábados
