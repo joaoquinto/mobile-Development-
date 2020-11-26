@@ -276,3 +276,9 @@ display: inline-block; /*Se comporta como elemento de linha, mas com caracterist
 /* deslocamento-x | deslocamento-y | raio-de-desfoque | cor */
 text-shadow: 1px 1px 2px black;
 ```
+
+## Retirar bordar de selecionamento de um input
+
+```css
+outline: none;
+```
