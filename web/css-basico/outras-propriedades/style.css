@@ -1,0 +1,20 @@
+body {
+  background-color: #333333;
+  background-image: url("esporte-1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 5000px;
+}
+
+div {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  background-color: #cccccc;
+  background-image: url("esporte-4.jpeg");
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: cover;
+}
