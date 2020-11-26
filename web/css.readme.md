@@ -1,4 +1,14 @@
-# Sintaxe Básica
+# Css
+
+## Css Normalize
+
+[Normalize.css](https://http://necolas.github.io/normalize.css/) faz com que os navegadores renderizem todos os elementos de forma mais consistente e de acordo com os padrões modernos. Ele visa precisamente apenas os estilos que precisam de normalização.
+
+## Css Reset
+
+[Reset.css](https://meyerweb.com/eric/tools/css/reset/index.html) objetivo de um Reset.css é reduzir as inconsistências do navegador em coisas como alturas de linha padrão, margens e tamanhos de fonte dos títulos e assim por diante.
+
+## Sintaxe Básica
 
 ```css
 seletor {
@@ -143,7 +153,17 @@ h1 {
 }
 ```
 
-# Pseudo Classes em links
+# Pseudo Classes
+
+## Para selecionar um elemento
+
+```css
+.produto-info ul li:nth-child(odd) /* Seleciona todo elemento que tiver posição impa */
+.produto-info ul li:nth-child(even) /* Seleciona todo elemento que tiver posição par */
+.produto-info ul li:first-child()
+```
+
+## em links
 
     - a:link{}
     - a:visited{}
