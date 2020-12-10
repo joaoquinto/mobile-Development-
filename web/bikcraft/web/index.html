@@ -3,6 +3,18 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- SEO -->
+	<meta name="description" content="Compre a sua bicicleta personalizada. Possuimos bicicletas  passeio, retrô e esporte">
+	<!-- Compartilhamento -->
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Bikcraft - Bicicletas Personalizadas" />
+	<meta property="og:description" content="Compre a sua bicicleta personalizada. Possuimos bicicletas  passeio, retrô e esporte" />
+	<meta property="og:url" content="http://bikcraft.com/index.html" />
+	<meta property="og:image" content="http://bikcraft.com/../web/img/og-image.png" />
+	<!-- Compartilhamento -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- SEO -->
 	<!-- Implementa um padrão para tags html e css. -->
 	<link rel="stylesheet" href="css/normalize.css">
 	<!-- Reseta todo o html para ex (margin: 0, padding: 0, border: 0) -->
@@ -10,7 +22,9 @@
 	<!-- Sistema de grid -->
 	<link rel="stylesheet" href="css/grid.css">
 	<link rel="stylesheet" href="css/style.css"">
-  <title>Bikcraft</title>
+	<link rel=" stylesheet" href="css/responsivo.css"">
+<script>document.documentElement.classList.add('js');</script>
+	<title>Bikcraft - Bicicletas Personalizadas</title>
 </head>
 
 <body>
@@ -35,9 +49,9 @@
 	<section class="introducao">
 		<!-- Container com 960px de largura. Vai segurar todo o conteúdo e limitar o espaçamento-->
 		<div class="container">
-			<h1>Bicicletas Feitas a Mão</h1>
+			<h1 data-anime="400" class="fadeInDown">Bicicletas Feitas a Mão</h1>
 			<!-- Serve para citações -->
-			<blockquote class="quote-externo">
+			<blockquote class="quote-externo  fadeInDown" data-anime="800">
 				<p>
 					"Não tenha nada em sua casa que você não considere útil ou acredite ser
 					bonito"
@@ -45,13 +59,13 @@
 				<!-- Serve para informar quem citou a frase -->
 				<cite>William Morrins</cite>
 			</blockquote>
-			<a href="produtos.html" class="btn">Orçamentos</a>
+			<a href="produtos.html" class="btn" data-anime="1200">Orçamentos</a>
 		</div>
 	</section>
 	<section class="produtos container">
-		<h2 class="subtitulo">Produtos</h2>
+		<h2 class="subtitulo fadeInDown" data-anime="1600">Produtos</h2>
 		<!-- Pode se fazer uma lista  de coisas nesse estil -->
-		<ul class="produtos-lista">
+		<ul class="produtos-lista fadeInDown" data-anime="2000">
 			<li class="grid-1-3">
 				<div class="produtos-icone">
 					<img src="../web/img/produtos/passeio.svg" alt="Bikcraft Passeio">
@@ -94,6 +108,18 @@
 				<li class="grid-8"><img src="../web/img/portfolio/passeio.jpg" alt="Bicicleta Passeio"></li>
 				<li class="grid-16"><img src="../web/img/portfolio/esporte.jpg" alt="Bicicleta Esporte"></li>
 			</ul>
+			<!-- 			<div data-slide="portfolio">
+				<ul class="portfolio-lista">
+					<li class="grid-8"><img src="../web/img/portfolio/retro.jpg" alt="Bicicleta Retrô"></li>
+					<li class="grid-8"><img src="../web/img/portfolio/passeio.jpg" alt="Bicicleta Passeio"></li>
+					<li class="grid-16"><img src="../web/img/portfolio/esporte.jpg" alt="Bicicleta Esporte"></li>
+				</ul>
+				<ul class="portfolio-lista">
+					<li class="grid-8"><img src="../web/img/portfolio/passeio.jpg" alt="Bicicleta Passeio"></li>
+					<li class="grid-8"><img src="../web/img/portfolio/retro.jpg" alt="Bicicleta Retrô"></li>
+					<li class="grid-16"><img src="../web/img/portfolio/esporte.jpg" alt="Bicicleta Esporte"></li>
+				</ul>
+			</div> -->
 			<div class="call">
 				<p>conheça mais do nosso portfólio </p>
 				<a href="portfolio.html" class="btn">Portfólio</a>
@@ -145,14 +171,14 @@
 				<div class="grid-4 footer-contato">
 					<h3>Contato</h3>
 					<ul>
-						<li>- 21 99999-9999</li>
+						<li><a href="tel:21 99999-9999">- 21 99999-9999</a></li>
 						<li>- contato@bikcraft.com</li>
-						<li>- Botafogo - RJ</li>
+						<li><a href="https://goo.gl/maps/B5h6zorZLsCSGBJw8" target="_blank" rel="noopener noreferrer">- Botafogo - RJ</a></li>
 					</ul>
 				</div>
 				<div class="grid-4 footer-redes">
 					<h3>Redes sociais</h3>
-					<ul class="redes-sociais">
+					<ul>
 						<li>
 							<a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
 								<img src="../web/img/redes-sociais/facebook.svg" alt="Bikcraft Facebook">
@@ -180,6 +206,8 @@
 			</div>
 		</div>
 	</footer>
+	<script src="../web/js/simple-anime.js"></script>
+	<script src="../web/js/script.js"></script>
 	</body>
 
 </html>

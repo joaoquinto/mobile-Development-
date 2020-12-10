@@ -161,6 +161,7 @@ h1 {
 .produto-info ul li:nth-child(odd) /* Seleciona todo elemento que tiver posição impa */
 .produto-info ul li:nth-child(even) /* Seleciona todo elemento que tiver posição par */
 .produto-info ul li:first-child()
+.contato-dados span:nth-of-type(2)/* Seleciona todo elemento que tiver posição par *//* Seleciona todo elemento que tiver posição impa */
 ```
 
 ## em links
