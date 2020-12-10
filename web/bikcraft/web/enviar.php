@@ -12,10 +12,10 @@ $email_envio = ""; // E-mail do site (ex: contato@seusite.com)
 $email_pass = ""; // Senha do e-mail
 
 $site_name = "Bikcraft"; // Nome do Site
-$site_url = "www.bikcraft.com"; // URL do Site
+$site_url = "joaoquinto-development.000webhostapp.com"; // URL do Site
 
-$host_smtp = ""; // HOST SMTP Ex: smtp.domain.com.br
-$host_port = ""; // Porta do Host, geralmente 465 ou 587
+$host_smtp = "files.000webhost.com"; // HOST SMTP Ex: smtp.domain.com.br
+$host_port = "21"; // Porta do Host, geralmente 465 ou 587
 
 
 // Não mudar abaixo:

@@ -11,4 +11,4 @@ php examples/helpers/mail/example.php
 ## Usage
 
 - See this complete working [example](https://github.com/sendgrid/sendgrid-php/blob/master/examples/helpers/mail/example.php).
-- [Documentation](https://sendgrid.com/docs/API_Reference/Web_API_v3/Mail/overview.html)
+- [Documentation](https://sendgrid.com/docs/API_Referen_API_v3/Mail/overview.html)

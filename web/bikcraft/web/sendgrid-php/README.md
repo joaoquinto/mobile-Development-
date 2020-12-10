@@ -9,13 +9,14 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/sendgrid/sendgrid-php.svg)](https://github.com/sendgrid/sendgrid-php/graphs/contributors)
 [![Open Source Helpers](https://www.codetriage.com/sendgrid/sendgrid-php/badges/users.svg)](https://www.codetriage.com/sendgrid/sendgrid-php)
 
-**NEW:** 
+**NEW:**
+
 - Subscribe to email [notifications](https://dx.sendgrid.com/newsletter/php) for releases and breaking changes.
 - Send SMS messages with [Twilio](https://github.com/sendgrid/sendgrid-php/blob/master/USE_CASES.md#sms).
 
 **This library allows you to quickly and easily use the Twilio SendGrid Web API v3 via PHP.**
 
-Version 7.X.X of this library provides full support for all Twilio SendGrid [Web API v3](https://sendgrid.com/docs/API_Reference/Web_API_v3/index.html) endpoints, including the new [v3 /mail/send](https://sendgrid.com/blog/introducing-v3mailsend-sendgrids-new-mail-endpoint).
+Version 7.X.X of this library provides full support for all Twilio SendGrid [Web API v3](https://sendgrid.com/docs/API_Referen_API_v3/index.html) endpoints, including the new [v3 /mail/send](https://sendgrid.com/blog/introducing-v3mailsend-sendgrids-new-mail-endpoint).
 
 We want this library to be community driven and Twilio SendGrid led. Your help is needed to realize this goal. To help make sure we are building the right things in the right order, we ask that you create [issues](https://github.com/sendgrid/sendgrid-php/issues) and [pull requests](https://github.com/sendgrid/sendgrid-php/blob/master/CONTRIBUTING.md) or simply upvote or comment on existing issues or pull requests.
 
@@ -25,18 +26,19 @@ We appreciate your continued support, thank you!
 
 # Table of Contents
 
-* [Installation](#installation)
-* [Quick Start](#quick-start)
-* [Use Cases](#use-cases)
-* [Usage](#usage)
-* [Announcements](#announcements)
-* [Roadmap](#roadmap)
-* [How to Contribute](#contribute)
-* [Troubleshooting](#troubleshooting)
-* [About](#about)
-* [License](#license)
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Use Cases](#use-cases)
+- [Usage](#usage)
+- [Announcements](#announcements)
+- [Roadmap](#roadmap)
+- [How to Contribute](#contribute)
+- [Troubleshooting](#troubleshooting)
+- [About](#about)
+- [License](#license)
 
 <a name="installation"></a>
+
 # Installation
 
 ## Prerequisites
@@ -50,11 +52,14 @@ We appreciate your continued support, thank you!
 Update the development environment with your [SENDGRID_API_KEY](https://app.sendgrid.com/settings/api_keys), for example:
 
 1. Copy the sample env file to a new file named `.env`
+
 ```bash
 cp .env.sample .env
 ```
+
 2. Edit the `.env` file to include your `SENDGRID_API_KEY`
 3. Source the `.env` file
+
 ```bash
 source ./.env
 ```
@@ -85,6 +90,7 @@ Previous versions of the library can be found in the [version index](https://sen
 - The dependency free [php-http-client](https://github.com/sendgrid/php-http-client)
 
 <a name="quick-start"></a>
+
 # Quick Start
 
 ## Hello Email
@@ -102,7 +108,7 @@ require 'vendor/autoload.php'; // If you're using Composer (recommended)
 // which is included in the download:
 // https://github.com/sendgrid/sendgrid-php/releases
 
-$email = new \SendGrid\Mail\Mail(); 
+$email = new \SendGrid\Mail\Mail();
 $email->setFrom("test@example.com", "Example User");
 $email->setSubject("Sending with Twilio SendGrid is Fun");
 $email->addTo("test@example.com", "Example User");
@@ -178,19 +184,22 @@ try {
 ```
 
 <a name="use-cases"></a>
+
 # Use Cases
 
 [Examples of common API use cases](https://github.com/sendgrid/sendgrid-php/blob/master/USE_CASES.md), such as how to send an email with a transactional template.
 
 <a name="usage"></a>
+
 # Usage
 
 - [Twilio SendGrid Docs](https://sendgrid.com/docs/API_Reference/index.html)
 - [Generic Library Usage
-    Documentation](https://github.com/sendgrid/sendgrid-php/tree/master/USAGE.md)
+  Documentation](https://github.com/sendgrid/sendgrid-php/tree/master/USAGE.md)
 - [Example Code](https://github.com/sendgrid/sendgrid-php/blob/master/USE_CASES.md)
 
 <a name="announcements"></a>
+
 # Announcements
 
 v7 has been released! Please see the [release notes](https://github.com/sendgrid/sendgrid-php/releases/tag/v7.0.0) for details.
@@ -198,11 +207,13 @@ v7 has been released! Please see the [release notes](https://github.com/sendgrid
 All updates to this library are documented in our [CHANGELOG](https://github.com/sendgrid/sendgrid-php/blob/master/CHANGELOG.md) and [releases](https://github.com/sendgrid/sendgrid-php/releases). You may also subscribe to email [release notifications](https://dx.sendgrid.com/newsletter/php) for releases and breaking changes.
 
 <a name="roadmap"></a>
+
 # Roadmap
 
 If you are interested in the future direction of this project, please take a look at our open [issues](https://github.com/sendgrid/sendgrid-php/issues) and [pull requests](https://github.com/sendgrid/sendgrid-php/pulls). We would love to hear your feedback.
 
 <a name="contribute"></a>
+
 # How to Contribute
 
 We encourage contribution to our libraries (you might even score some nifty swag), please see our [CONTRIBUTING](https://github.com/sendgrid/sendgrid-php/blob/master/CONTRIBUTING.md) guide for details.
@@ -216,17 +227,19 @@ Quick links:
 - [Review Pull Requests](https://github.com/sendgrid/sendgrid-php/blob/master/CONTRIBUTING.md#code-reviews)
 
 <a name="troubleshooting"></a>
+
 # Troubleshooting
 
 Please see our [troubleshooting guide](https://github.com/sendgrid/sendgrid-php/blob/master/TROUBLESHOOTING.md) for common library issues.
 
 <a name="about"></a>
+
 # About
 
 sendgrid-php is guided and supported by the Twilio [Developer Experience Team](mailto:dx@sendgrid.com).
 
 sendgrid-php is maintained and funded by Twilio SendGrid, Inc. The names and logos for sendgrid-php are trademarks of Twilio SendGrid, Inc.
 
-
 # License
+
 [The MIT License (MIT)](LICENSE.txt)

@@ -1,6 +1,7 @@
 This documentation provides examples for specific use cases. Please [open an issue](https://github.com/sendgrid/sendgrid-php/issues) or make a pull request for any use cases you would like us to document here. Thank you!
 
 # Table of Contents
+
 - [Table of Contents](#table-of-contents)
 - [Attachments](#attachments)
 - [Attaching a File from Box](#attaching-a-file-from-box)
@@ -17,6 +18,7 @@ This documentation provides examples for specific use cases. Please [open an iss
 - [Google App Engine Installation](#google-app-engine-installation)
 
 <a name="attachments"></a>
+
 # Attachments
 
 Here is an example of attaching a text file to your email, assuming that text file `my_file.txt` is located in the same directory. You can use the `addAttachments` method to add an array attachments.
@@ -61,32 +63,36 @@ try {
 ```
 
 <a name="box-attachment-example"></a>
+
 # Attaching a File from Box
 
-You can attach a file from [Box](https://www.box.com) to your emails. 
-Because there is no official Box SDK for PHP, this example requires 
-[firebase/php-jwt](https://github.com/firebase/php-jwt) to generate a 
-[JSON Web Token](https://jwt.io) assertion. Before using this code, you should 
-set up a JWT application on [Box](https://developer.box.com/docs/setting-up-a-jwt-app). 
-For more information about authenticating with JWT, see 
+You can attach a file from [Box](https://www.box.com) to your emails.
+Because there is no official Box SDK for PHP, this example requires
+[firebase/php-jwt](https://github.com/firebase/php-jwt) to generate a
+[JSON Web Token](https://jwt.io) assertion. Before using this code, you should
+set up a JWT application on [Box](https://developer.box.com/docs/setting-up-a-jwt-app).
+For more information about authenticating with JWT, see
 [this page](https://developer.box.com/docs/construct-jwt-claim-manually).
 
-After completing the setup tutorial, you will want to make sure your app’s 
+After completing the setup tutorial, you will want to make sure your app’s
 configuration settings have at least the following options enabled:
 
 **Application Access**
-* Enterprise
+
+- Enterprise
 
 **Application Scopes**
-* Read all files and folders stored in Box
-* Read and write all files and folders stored in Box
-* Manage users
+
+- Read all files and folders stored in Box
+- Read and write all files and folders stored in Box
+- Manage users
 
 **Advanced Features**
-* Perform Actions as Users
 
-Remember to reauthorize your app 
-[here](https://app.box.com/master/settings/openbox) after making any changes to 
+- Perform Actions as Users
+
+Remember to reauthorize your app
+[here](https://app.box.com/master/settings/openbox) after making any changes to
 your app’s JWT scopes.
 
 ```php
@@ -199,12 +205,12 @@ if (isset($fileId) && isset($userId)){
     $result = curl_exec($ch);
     $contentType = curl_getinfo($ch, CURLINFO_CONTENT_TYPE);
     curl_close($ch);
-    
+
     $attachmentFilename = end($path);
     $attachmentContent = base64_encode($result);
     $attachmentContentType = $contentType;
-    
-    $email = new \SendGrid\Mail\Mail(); 
+
+    $email = new \SendGrid\Mail\Mail();
     $email->setFrom("test@example.com", "Example User");
     $email->setSubject("Attaching a File from Box");
     $email->addTo("test@example.com", "Example User");
@@ -212,7 +218,7 @@ if (isset($fileId) && isset($userId)){
     $email->addContent(
         "text/html", "<strong>See attached file from Box.</strong>"
     );
-    
+
     $attachment = new \SendGrid\Mail\Attachment();
     $attachment->setContent($attachmentContent);
     $attachment->setType($attachmentContentType);
@@ -236,7 +242,8 @@ if (isset($fileId) && isset($userId)){
 ```
 
 <a name="kitchen-sink"></a>
-# Kitchen Sink -  an example with all settings used
+
+# Kitchen Sink - an example with all settings used
 
 ```php
 <?php
@@ -251,8 +258,8 @@ require 'vendor/autoload.php'; // If you're using Composer (recommended)
 
 $email = new \SendGrid\Mail\Mail();
 
-// For a detailed description of each of these settings, 
-// please see the 
+// For a detailed description of each of these settings,
+// please see the
 // [documentation](https://sendgrid.com/docs/API_Reference/api_v3.html).
 $email->setSubject("Sending with Twilio SendGrid is Fun 2");
 
@@ -309,7 +316,7 @@ $email->addCustomArgs($customArgs);
 $email->setSendAt(1461775051);
 
 // You can add a personalization index or personalization parameter to the above
-// methods to add and update multiple personalizations. You can learn more about 
+// methods to add and update multiple personalizations. You can learn more about
 // personalizations [here](https://sendgrid.com/docs/Classroom/Send/v3_Mail_Send/personalizations.html).
 
 // The values below this comment are global to entire message
@@ -340,7 +347,7 @@ $email->addAttachment(
     "Banner"
 );
 $attachments = [
-    [   
+    [
         "base64 encoded content2",
         "banner2.jpeg",
         "image/jpeg",
@@ -443,8 +450,8 @@ require 'vendor/autoload.php'; // If you're using Composer (recommended)
 
 $email = new \SendGrid\Mail\Mail();
 
-// For a detailed description of each of these settings, 
-// please see the 
+// For a detailed description of each of these settings,
+// please see the
 // [documentation](https://sendgrid.com/docs/API_Reference/api_v3.html).
 $email->setSubject(
     new \SendGrid\Mail\Subject("Sending with Twilio SendGrid is Fun 2")
@@ -452,14 +459,14 @@ $email->setSubject(
 
 $email->addTo(new \SendGrid\Mail\To("test@example.com", "Example User"));
 $email->addTo(new \SendGrid\Mail\To("test+1@example.com", "Example User1"));
-$toEmails = [ 
+$toEmails = [
     new \SendGrid\Mail\To("test+2@example.com", "Example User2"),
     new \SendGrid\Mail\To("test+3@example.com", "Example User3")
 ];
 $email->addTos($toEmails);
 
 $email->addCc(new \SendGrid\Mail\Cc("test+4@example.com", "Example User4"));
-$ccEmails = [ 
+$ccEmails = [
     new \SendGrid\Mail\Cc("test+5@example.com", "Example User5"),
     new \SendGrid\Mail\Cc("test+6@example.com", "Example User6")
 ];
@@ -468,7 +475,7 @@ $email->addCcs($ccEmails);
 $email->addBcc(
     new \SendGrid\Mail\Bcc("test+7@example.com", "Example User7")
 );
-$bccEmails = [ 
+$bccEmails = [
     new \SendGrid\Mail\Bcc("test+8@example.com", "Example User8"),
     new \SendGrid\Mail\Bcc("test+9@example.com", "Example User9")
 ];
@@ -511,7 +518,7 @@ $email->addCustomArgs($customArgs);
 $email->setSendAt(new \SendGrid\Mail\SendAt(1461775051));
 
 // You can add a personalization index or personalization parameter to the above
-// methods to add and update multiple personalizations. You can learn more about 
+// methods to add and update multiple personalizations. You can learn more about
 // personalizations [here](https://sendgrid.com/docs/Classroom/Send/v3_Mail_Send/personalizations.html).
 
 // The values below this comment are global to entire message
@@ -676,6 +683,7 @@ try {
 ```
 
 <a name="single-email-single-recipient"></a>
+
 # Send an Email to a Single Recipient
 
 ```php
@@ -689,7 +697,7 @@ require 'vendor/autoload.php'; // If you're using Composer (recommended)
 // which is included in the download:
 // https://github.com/sendgrid/sendgrid-php/releases
 
-$email = new \SendGrid\Mail\Mail(); 
+$email = new \SendGrid\Mail\Mail();
 $email->setFrom("test@example.com", "Example User");
 $email->setSubject("Sending with Twilio SendGrid is Fun");
 $email->addTo("test@example.com", "Example User");
@@ -749,6 +757,7 @@ try {
 ```
 
 <a name="single-email-multiple-recipients"></a>
+
 # Send an Email to Multiple Recipients
 
 ```php
@@ -762,9 +771,9 @@ require 'vendor/autoload.php'; // If you're using Composer (recommended)
 // which is included in the download:
 // https://github.com/sendgrid/sendgrid-php/releases
 
-$email = new \SendGrid\Mail\Mail(); 
+$email = new \SendGrid\Mail\Mail();
 $email->setFrom("test@example.com", "Example User");
-$tos = [ 
+$tos = [
     "test+test1@example.com" => "Example User1",
     "test+test2@example.com" => "Example User2",
     "test+test3@example.com" => "Example User3"
@@ -786,7 +795,7 @@ try {
 }
 ```
 
-OR 
+OR
 
 ```php
 <?php
@@ -799,7 +808,7 @@ require 'vendor/autoload.php'; // If you're using Composer (recommended)
 // which is included in the download:
 // https://github.com/sendgrid/sendgrid-php/releases
 $from = new \SendGrid\Mail\From("test@example.com", "Example User");
-$tos = [ 
+$tos = [
     new \SendGrid\Mail\To("test+test1@example.com", "Example User1"),
     new \SendGrid\Mail\To("test+test2@example.com", "Example User2"),
     new \SendGrid\Mail\To("test+test3@example.com", "Example User3")
@@ -831,6 +840,7 @@ try {
 ```
 
 <a name="multiple-emails-multiple-recipients"></a>
+
 # Send Multiple Emails to Multiple Recipients
 
 Note that [transactional templates](#transactional-templates) may be a better option for this use case, especially for more complex uses.
@@ -875,7 +885,7 @@ $tos = [
         ]
     )
 ];
-$subject = new \SendGrid\Mail\Subject("Hi -name-!"); // default subject 
+$subject = new \SendGrid\Mail\Subject("Hi -name-!"); // default subject
 $globalSubstitutions = [
     '-time-' => "2018-05-03 23:10:29"
 ];
@@ -981,6 +991,7 @@ try {
 ```
 
 <a name="transactional-templates"></a>
+
 # Transactional Templates
 
 For this example, we assume you have created a [transactional template](https://sendgrid.com/docs/User_Guide/Transactional_Templates/create_and_edit_transactional_templates.html) in the UI or via the API. Following is the template content we used for testing.
@@ -1001,17 +1012,17 @@ Template Body:
 
 ```html
 <html>
-<head>
-	<title></title>
-</head>
-<body>
-Hello {{ name }},
-<br /><br/>
-I'm glad you are trying out the template feature!
-<br /><br/>
-I hope you are having a great day in {{ city }} :)
-<br /><br/>
-</body>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    Hello {{ name }},
+    <br /><br />
+    I'm glad you are trying out the template feature!
+    <br /><br />
+    I hope you are having a great day in {{ city }} :)
+    <br /><br />
+  </body>
 </html>
 ```
 
@@ -1096,7 +1107,7 @@ $email->addTo(
     0
 );
 $email->addTo(
-    "test+test2@example.com", 
+    "test+test2@example.com",
     "Example User2",
     [
         "subject" => "Subject 2",
@@ -1106,7 +1117,7 @@ $email->addTo(
     1
 );
 $email->addTo(
-    "test+test3@example.com", 
+    "test+test3@example.com",
     "Example User3",
     [
         "subject" => "Subject 3",
@@ -1128,6 +1139,7 @@ try {
 ```
 
 <a name="legacy-templates"></a>
+
 # Legacy Templates
 
 For this example, we assume you have created a [legacy template](https://sendgrid.com/docs/User_Guide/Transactional_Templates/create_and_edit_transactional_templates.html). Following is the template content we used for testing.
@@ -1148,19 +1160,19 @@ Template Body:
 
 ```html
 <html>
-<head>
-	<title></title>
-</head>
-<body>
-Hello -name-,
-<br /><br/>
-I'm glad you are trying out the template feature!
-<br /><br/>
-<%body%>
-<br /><br/>
-I hope you are having a great day in -city- :)
-<br /><br/>
-</body>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    Hello -name-,
+    <br /><br />
+    I'm glad you are trying out the template feature!
+    <br /><br />
+    <%body%>
+    <br /><br />
+    I hope you are having a great day in -city- :)
+    <br /><br />
+  </body>
 </html>
 ```
 
@@ -1183,7 +1195,7 @@ use \SendGrid\Mail\HtmlContent as HtmlContent;
 use \SendGrid\Mail\Mail as Mail;
 
 $from = new From("test@example.com", "Example User");
-$tos = [ 
+$tos = [
     new To(
         "test+test1@example.com",
         "Example User1",
@@ -1209,7 +1221,7 @@ $tos = [
         ]
     )
 ];
-$subject = new Subject("I'm replacing the subject tag"); 
+$subject = new Subject("I'm replacing the subject tag");
 $plainTextContent = new PlainTextContent(
     "I'm replacing the **body tag**"
 );
@@ -1238,31 +1250,31 @@ try {
 OR
 
 ```php
-$email = new \SendGrid\Mail\Mail(); 
+$email = new \SendGrid\Mail\Mail();
 $email->setFrom("test@sendgrid.com", "Example User");
 $email->setSubject("I'm replacing the subject tag");
 $email->addTo(
-    "test+test1@example.com", 
+    "test+test1@example.com",
     "Example User1",
-    [ 
+    [
         "-name-" => "Example User 1",
         "-city-" => "Denver"
     ],
     0
 );
 $email->addTo(
-    "test+test2@example.com", 
+    "test+test2@example.com",
     "Example User2",
-    [ 
+    [
         "-name-" => "Example User 2",
         "-city-" => "Denver"
     ],
     1
 );
 $email->addTo(
-    "test+test3@example.com", 
+    "test+test3@example.com",
     "Example User3",
-    [ 
+    [
         "-name-" => "Example User 3",
         "-city-" => "Redwood City"
     ],
@@ -1283,6 +1295,7 @@ try {
 ```
 
 <a name="sms"></a>
+
 # Send a SMS Message
 
 Following are the steps to add Twilio SMS to your app:
@@ -1295,7 +1308,7 @@ Sign up for a free Twilio account [here](https://www.twilio.com/try-twilio?sourc
 
 You can obtain your Account Sid and Auth Token from [twilio.com/console](https://twilio.com/console).
 
-**__Mac__**
+****Mac****
 
 ```bash
 echo "export TWILIO_ACCOUNT_SID='YOUR_TWILIO_ACCOUNT_SID'" > twilio.env
@@ -1304,7 +1317,7 @@ echo "twilio.env" >> .gitignore
 source ./twilio.env
 ```
 
-**__Windows__**
+****Windows****
 
 Temporarily set the environment variable (accessible only during the current CLI session):
 
@@ -1344,6 +1357,7 @@ $message = $client->messages->create(
 For more information, please visit the [Twilio SMS PHP documentation](https://www.twilio.com/docs/sms/quickstart/python).
 
 <a name="domain-authentication"></a>
+
 # How to Setup a Domain Authentication
 
 You can find documentation for how to setup a domain authentication via the UI [here](https://sendgrid.com/docs/ui/account-and-settings/how-to-set-up-domain-authentication/) and via API [here](https://github.com/sendgrid/sendgrid-php/blob/master/USAGE.md#sender-authentication).
@@ -1351,13 +1365,15 @@ You can find documentation for how to setup a domain authentication via the UI [
 Find more information about all of Twilio SendGrid's authentication related documentation [here](https://sendgrid.com/docs/ui/account-and-settings/).
 
 <a name="email-stats"></a>
+
 # How to View Email Statistics
 
 You can find documentation for how to view your email statistics via the UI [here](https://app.example.com/statistics) and via API [here](https://github.com/sendgrid/sendgrid-php/blob/master/USAGE.md#stats).
 
-Alternatively, we can post events to a URL of your choice via our [Event Webhook](https://example.com/docs/API_Reference/Webhooks/event.html) about events that occur as Twilio SendGrid processes your email.
+Alternatively, we can post events to a URL of your choice via our [Event Webhook](https://example.com/docs/API_Referenhooks/event.html) about events that occur as Twilio SendGrid processes your email.
 
 <a name="heroku"></a>
+
 # Deploying to Heroku
 
 Use the button below to instantly setup your own Simple instance for sending email using sendgrid on Heroku.
@@ -1367,6 +1383,7 @@ Use the button below to instantly setup your own Simple instance for sending ema
 </a>
 
 <a name="GAE-instructions"></a>
+
 # Google App Engine Installation
 
 Google App Engine installations with composer require creation of file `php.ini` in the base folder(the same directory as the `app.yaml` file). You can read more about this file [here](https://cloud.google.com/appengine/docs/standard/php/config/php_ini).

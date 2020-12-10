@@ -257,7 +257,7 @@ try {
 
 ////////////////////////////////////////////////////
 // Update Event Notification Settings #
-// PATCH /user/webhooks/event/settings #
+// PATCH /ushooks/event/settings #
 
 $request_body = json_decode('{
   "bounce": true, 
@@ -286,7 +286,7 @@ try {
 
 ////////////////////////////////////////////////////
 // Retrieve Event Webhook settings #
-// GET /user/webhooks/event/settings #
+// GET /ushooks/event/settings #
 
 try {
     $response = $sg->client->user()->webhooks()->event()->settings()->get();
@@ -299,7 +299,7 @@ try {
 
 ////////////////////////////////////////////////////
 // Test Event Notification Settings  #
-// POST /user/webhooks/event/test #
+// POST /ushooks/event/test #
 
 $request_body = json_decode('{
   "url": "url"
@@ -316,7 +316,7 @@ try {
 
 ////////////////////////////////////////////////////
 // Create a parse setting #
-// POST /user/webhooks/parse/settings #
+// POST /ushooks/parse/settings #
 
 $request_body = json_decode('{
   "hostname": "myhostname.com", 
@@ -336,7 +336,7 @@ try {
 
 ////////////////////////////////////////////////////
 // Retrieve all parse settings #
-// GET /user/webhooks/parse/settings #
+// GET /ushooks/parse/settings #
 
 try {
     $response = $sg->client->user()->webhooks()->parse()->settings()->get();
@@ -349,7 +349,7 @@ try {
 
 ////////////////////////////////////////////////////
 // Update a parse setting #
-// PATCH /user/webhooks/parse/settings/{hostname} #
+// PATCH /ushooks/parse/settings/{hostname} #
 
 $request_body = json_decode('{
   "send_raw": true, 
@@ -369,7 +369,7 @@ try {
 
 ////////////////////////////////////////////////////
 // Retrieve a specific parse setting #
-// GET /user/webhooks/parse/settings/{hostname} #
+// GET /ushooks/parse/settings/{hostname} #
 
 $hostname = "test_url_param";
 
@@ -384,7 +384,7 @@ try {
 
 ////////////////////////////////////////////////////
 // Delete a parse setting #
-// DELETE /user/webhooks/parse/settings/{hostname} #
+// DELETE /ushooks/parse/settings/{hostname} #
 
 $hostname = "test_url_param";
 
@@ -399,7 +399,7 @@ try {
 
 ////////////////////////////////////////////////////
 // Retrieves Inbound Parse Webhook statistics. #
-// GET /user/webhooks/parse/stats #
+// GET /ushooks/parse/stats #
 
 $query_params = json_decode('{"aggregated_by": "day", "limit": "test_string", "start_date": "2016-01-01", "end_date": "2016-04-01", "offset": "test_string"}');
 

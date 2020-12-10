@@ -1,11 +1,14 @@
 # Change Log
+
 All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [7.3.0] - 2019-04-15 ##
+## [7.3.0] - 2019-04-15
+
 ### Fixed
-- PR [#821](https://github.com/sendgrid/sendgrid-php/pull/821): PHP 7.3 support and fix Prism download problem. 
+
+- PR [#821](https://github.com/sendgrid/sendgrid-php/pull/821): PHP 7.3 support and fix Prism download problem.
 - Closes [#669](https://github.com/sendgrid/sendgrid-php/issues/669), PR [#670](https://github.com/sendgrid/sendgrid-php/pull/670): Fix Mail::setGlobalSubject(). Thanks to [Spencer Salisbury](https://github.com/smsalisbury) for the solution!
 - Closes [#782](https://github.com/sendgrid/sendgrid-php/issues/782), PR [#783](https://github.com/sendgrid/sendgrid-php/pull/783): Remove references to 'whitelabel'. Thanks to [Chandler Weiner](https://github.com/crweiner) for the solution!
 - Closes [#763](https://github.com/sendgrid/sendgrid-php/issues/763), PR [#764](https://github.com/sendgrid/sendgrid-php/pull/764): Update link to license. Thanks to [Pranjal Vyas](https://github.com/vyaspranjal33) for the solution!
@@ -13,25 +16,33 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Closes [#739](https://github.com/sendgrid/sendgrid-php/issues/739), PR [#740](https://github.com/sendgrid/sendgrid-php/pull/740): . Thanks to [Alex Borisov](https://github.com/smrtab) for the solution!
 
 ### Added
+
 - PR [#828](https://github.com/sendgrid/sendgrid-php/pull/828): Update Twilio branding, CLA policy.
 - Closes [#768](https://github.com/sendgrid/sendgrid-php/issues/768), PR [#769](https://github.com/sendgrid/sendgrid-php/pull/769): Update prerequisites. Thanks to [Rishabh](https://github.com/Rishabh04-02) for the solution!
 - Closes [#733](https://github.com/sendgrid/sendgrid-php/issues/733), PR [#736](https://github.com/sendgrid/sendgrid-php/pull/736): Update CONTRIBUTING - contribution guideline to branch off development. Thanks to [Alex](https://github.com/myzeprog) for the solution!
 - Closes [#481](https://github.com/sendgrid/sendgrid-php/issues/481), PR [#743](https://github.com/sendgrid/sendgrid-php/pull/743): Added Box attachment example. Thanks to [Joel](https://github.com/semijoelon) for the solution!
 - Closes [#690](https://github.com/sendgrid/sendgrid-php/issues/690), PR [#698](https://github.com/sendgrid/sendgrid-php/pull/698): Update prism version. Thanks to [Gergo Juhasz](https://github.com/geryjuhasz) for the solution!
 
-## [7.2.1] - 2018-09-18 ##
+## [7.2.1] - 2018-09-18
+
 ### Fixed
+
 - Closes [#671](https://github.com/sendgrid/sendgrid-php/issues/671), PR [#689](https://github.com/sendgrid/sendgrid-php/pull/689): isBase64 function returning incorrect. Thanks to [Jmky](https://github.com/Jmky) for the solution!
 
-## [7.2.0] - 2018-08-15 ##
+## [7.2.0] - 2018-08-15
+
 ### Added
+
 - Closes [#648](https://github.com/sendgrid/sendgrid-php/issues/648), PR [#657](https://github.com/sendgrid/sendgrid-php/pull/657): Allow for Dynamic Templates Implementation. Thanks to [Mike Willbanks](https://github.com/mwillbanks) for the PR!
 
-## [7.1.1] - 2018-08-15 ##
+## [7.1.1] - 2018-08-15
+
 ### Fixed
+
 - Closes [#667](https://github.com/sendgrid/sendgrid-php/issues/667), PR [#668](https://github.com/sendgrid/sendgrid-php/pull/668): isBase64 function fix. Thanks to [Tigran M](https://github.com/developer-devPHP) for bringing this to our attention!
 
-## [7.1.0] - 2018-08-14 ##
+## [7.1.0] - 2018-08-14
+
 ### Added
 
 - Closes [#612](https://github.com/sendgrid/sendgrid-php/issues/612), PR [#652](https://github.com/sendgrid/sendgrid-php/pull/652): Fixes #612 Add TypeException and include type validations in classes inside mail/. Thanks to [James Harding](https://github.com/hjmsw) for the PR!
@@ -45,63 +56,69 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - PR [#663](https://github.com/sendgrid/sendgrid-php/pull/663): Improve Contributing.md readability. Thanks to [Anshul Singhal](https://github.com/af4ro) for the PR!
 
 ### Fixed
+
 - PR [#631](https://github.com/sendgrid/sendgrid-php/pull/631): Broken documentation link. Thanks to [David Duman](https://github.com/dvdnhm) for the PR!
 - PR [#633](https://github.com/sendgrid/sendgrid-php/pull/633): Fixes for non-composer environments. Thanks to [Tom Gordon](https://github.com/apcro) for the PR!
 - PR [#634](https://github.com/sendgrid/sendgrid-php/pull/634): Fixes missing file extension. Thanks to [Muberra Duman Demirtepe](https://github.com/muberraduman) for the PR!
 - PR [#658](https://github.com/sendgrid/sendgrid-php/pull/658): Corrected PHP Syntax. Thanks to [David Passmore](https://github.com/davcpas1234) for the PR!
 - Fixes [#624](https://github.com/sendgrid/sendgrid-php/issues/624), PR [#625](https://github.com/sendgrid/sendgrid-php/pull/625): Fix setGroupsToDisplay's handling of array arguments. Thanks to [Mo Ismailzai](https://github.com/moismailzai) for the PR!
 
-## [7.0.0] - 2018-05-19 ##
+## [7.0.0] - 2018-05-19
+
 ### BREAKING CHANGE
 
 Thanks to the [strong support and feedback of the SendGrid PHP community](https://github.com/sendgrid/sendgrid-php/issues/434), we have a new version of this SDK that should be a big improvement in the developer experience for this SDK.
 
 In particular, I'd like to make special mention of [@caseyw](https://github.com/caseyw), [@vitya1](https://github.com/vitya1), [@Braunson](https://github.com/Braunson), [@cbschuld](https://github.com/cbschuld), [@paoga87](https://github.com/paoga87), [@Taluu](https://github.com/Taluu), [@mazanax](https://github.com/mazanax), [@ninsuo](https://github.com/ninsuo), [@ianh2](https://github.com/ianh2), [@WadeShuler](https://github.com/WadeShuler), [@jaimehing](https://github.com/jaimehing), [@KnightAR](https://github.com/KnightAR), [@alextech](https://github.com/alextech) (my apologies if I've missed you)
 
-Since this is a major departure from v6.X, we advise you refactor your code according to the documentation found in the [README](https://github.com/sendgrid/sendgrid-php/blob/master/README.md) and [USE_CASES](https://github.com/sendgrid/sendgrid-php/blob/master/USE_CASES.md) files. We hope you find the new interface much easier to work with. Please open an [issue](https://github.com/sendgrid/sendgrid-php/issues) or PR if you run into any trouble or have any feedback. 
+Since this is a major departure from v6.X, we advise you refactor your code according to the documentation found in the [README](https://github.com/sendgrid/sendgrid-php/blob/master/README.md) and [USE_CASES](https://github.com/sendgrid/sendgrid-php/blob/master/USE_CASES.md) files. We hope you find the new interface much easier to work with. Please open an [issue](https://github.com/sendgrid/sendgrid-php/issues) or PR if you run into any trouble or have any feedback.
 
 If you wish to continue using previous versions of this SDK, no problam. However, we will not be updating versions less than v7 except for critical bugs and/or security issues.
 
 We hope this will be the last breaking change in the foreseeable future; that said, let the iterations begin!
 
-## [6.2.0] - 2018-03-28 ##
+## [6.2.0] - 2018-03-28
+
 ### Added
-- Closes [#454](https://github.com/sendgrid/sendgrid-php/issues/454), PR [#502](https://github.com/sendgrid/sendgrid-php/pull/502): 
-Add helper for adding new recipients to your contactdb via a webform, thanks to [Kraig Hufstedler](https://github.com/kraigh) for the PR!
 
-- Closes [#487](https://github.com/sendgrid/sendgrid-php/issues/487), PR [#506](https://github.com/sendgrid/sendgrid-php/pull/506): 
-Add helper to get all stats from a specified data range, thanks to [Milos Pejanovic](https://github.com/runz0rd) for the PR!
+- Closes [#454](https://github.com/sendgrid/sendgrid-php/issues/454), PR [#502](https://github.com/sendgrid/sendgrid-php/pull/502):
+  Add helper for adding new recipients to your contactdb via a webform, thanks to [Kraig Hufstedler](https://github.com/kraigh) for the PR!
 
-- Closes [#368](https://github.com/sendgrid/sendgrid-php/issues/368), PR [#511](https://github.com/sendgrid/sendgrid-php/pull/511): 
-Add support for commas and semicolns in email name, thanks to [Quentin Ligier](https://github.com/qligier) for the PR!
+- Closes [#487](https://github.com/sendgrid/sendgrid-php/issues/487), PR [#506](https://github.com/sendgrid/sendgrid-php/pull/506):
+  Add helper to get all stats from a specified data range, thanks to [Milos Pejanovic](https://github.com/runz0rd) for the PR!
 
-- Closes [#491](https://github.com/sendgrid/sendgrid-php/issues/491), PR [#493](https://github.com/sendgrid/sendgrid-php/pull/493: 
-Allow for setting attachment content from path, thanks to [rparpa](https://github.com/rparpa) for the PR!
+- Closes [#368](https://github.com/sendgrid/sendgrid-php/issues/368), PR [#511](https://github.com/sendgrid/sendgrid-php/pull/511):
+  Add support for commas and semicolns in email name, thanks to [Quentin Ligier](https://github.com/qligier) for the PR!
 
-## [6.1.0] - 2018-03-27 ##
+- Closes [#491](https://github.com/sendgrid/sendgrid-php/issues/491), PR [#493](https://github.com/sendgrid/sendgrid-php/pull/493:
+  Allow for setting attachment content from path, thanks to [rparpa](https://github.com/rparpa) for the PR!
+
+## [6.1.0] - 2018-03-27
+
 ### Added
+
 - PR [#512](https://github.com/sendgrid/sendgrid-php/pull/512): Omit PHP closing tag in use case sample, thanks to [Sébastien Santoro](https://github.com/dereckson) for the PR!
 
 - PR [#575](https://github.com/sendgrid/sendgrid-php/pull/575): Add an example to the README.md describing how to send emails as html as the content type, thanks to [Benjamin Manford](https://github.com/manfordbenjamin) for the PR!
 
-- Closes [#547](https://github.com/sendgrid/sendgrid-php/issues/547), PR [#549](https://github.com/sendgrid/sendgrid-php/pull/549): 
-Added Code Review to Contributing.md, thanks to [tomhorvat](https://github.com/tomhorvat) for the PR!
+- Closes [#547](https://github.com/sendgrid/sendgrid-php/issues/547), PR [#549](https://github.com/sendgrid/sendgrid-php/pull/549):
+  Added Code Review to Contributing.md, thanks to [tomhorvat](https://github.com/tomhorvat) for the PR!
 
 - PR [#565](https://github.com/sendgrid/sendgrid-php/pull/565): Add PHP 7.1 and 7.2 to Travis build matrix, thanks to [Emir Beganović](https://github.com/emirb) for the PR!
 
 - PR [#577](https://github.com/sendgrid/sendgrid-php/pull/577): Update PHP Version terms, thanks to [Siddhant Sharma](https://github.com/ssiddhantsharma) for the PR!
 
-- Closes [#540](https://github.com/sendgrid/sendgrid-php/issues/540), PR [#543](https://github.com/sendgrid/sendgrid-php/pull/543): 
-Feature/split unit tests, thanks to [Owen Voke](https://github.com/pxgamer) for the PR!
+- Closes [#540](https://github.com/sendgrid/sendgrid-php/issues/540), PR [#543](https://github.com/sendgrid/sendgrid-php/pull/543):
+  Feature/split unit tests, thanks to [Owen Voke](https://github.com/pxgamer) for the PR!
 
-- Closes [#441](https://github.com/sendgrid/sendgrid-php/issues/441), PR [#467](https://github.com/sendgrid/sendgrid-php/pull/467): 
-Add deploy to heroku button, thanks to [pangaunn](https://github.com/pangaunn) for the PR!
+- Closes [#441](https://github.com/sendgrid/sendgrid-php/issues/441), PR [#467](https://github.com/sendgrid/sendgrid-php/pull/467):
+  Add deploy to heroku button, thanks to [pangaunn](https://github.com/pangaunn) for the PR!
 
-- Closes [#423](https://github.com/sendgrid/sendgrid-php/issues/423), PR [#510](https://github.com/sendgrid/sendgrid-php/pull/510): 
-Adding Google App engine installation with composer instructions, thanks to [Nalin Bhardwaj](https://github.com/nalinbhardwaj) for the PR!
+- Closes [#423](https://github.com/sendgrid/sendgrid-php/issues/423), PR [#510](https://github.com/sendgrid/sendgrid-php/pull/510):
+  Adding Google App engine installation with composer instructions, thanks to [Nalin Bhardwaj](https://github.com/nalinbhardwaj) for the PR!
 
-- Closes [#541](https://github.com/sendgrid/sendgrid-php/issues/541), PR [#542](https://github.com/sendgrid/sendgrid-php/pull/542): 
-Added CodeCov support, thanks to [Owen Voke](https://github.com/pxgamer) for the PR!
+- Closes [#541](https://github.com/sendgrid/sendgrid-php/issues/541), PR [#542](https://github.com/sendgrid/sendgrid-php/pull/542):
+  Added CodeCov support, thanks to [Owen Voke](https://github.com/pxgamer) for the PR!
 
 - PR [#539](https://github.com/sendgrid/sendgrid-php/pull/539): Rename LICENSE.txt to md, thanks to [Ankit Jain](https://github.com/ankitjain28may) for the PR!
 
@@ -144,6 +161,7 @@ Added CodeCov support, thanks to [Owen Voke](https://github.com/pxgamer) for the
 - PR [#415](https://github.com/sendgrid/sendgrid-php/pull/415): Updated example.php to fix that there was no way for the sections to get substituted without their being a substition that calls them, thanks to [Kyle Roberts](https://github.com/kylearoberts) for the PR!
 
 ### Fixed
+
 - PR [#545](https://github.com/sendgrid/sendgrid-php/pull/545): Fix typo CONTRIBUTING.md, thanks to [thepriefy](https://github.com/thepriefy) for the PR!
 
 - PR [#588](https://github.com/sendgrid/sendgrid-php/pull/588): Fix broken unit tests
@@ -158,7 +176,7 @@ Added CodeCov support, thanks to [Owen Voke](https://github.com/pxgamer) for the
 
 - PR [#507](https://github.com/sendgrid/sendgrid-php/pull/507): Fix typos in various files, thanks to [Brandon Smith](https://github.com/brandon93s) for the PR!
 
-- Fixes [#336](https://github.com/sendgrid/sendgrid-php/issues/336), PR [#479](https://github.com/sendgrid/sendgrid-php/pull/479): Incorrect documentation path fixed, thanks to [Valerian Pereira](https://github.com/valerianpereira) for the PR! 
+- Fixes [#336](https://github.com/sendgrid/sendgrid-php/issues/336), PR [#479](https://github.com/sendgrid/sendgrid-php/pull/479): Incorrect documentation path fixed, thanks to [Valerian Pereira](https://github.com/valerianpereira) for the PR!
 
 - PR [#465](https://github.com/sendgrid/sendgrid-php/pull/465): Fix typo in README.md, thanks to [shra1cumar](https://github.com/shra1cumar) for the PR!
 
@@ -170,205 +188,281 @@ Added CodeCov support, thanks to [Owen Voke](https://github.com/pxgamer) for the
 
 - PR [#431](https://github.com/sendgrid/sendgrid-php/pull/431): Fixed minor typo during Mail creation, thanks to [joeldixon66](https://github.com/joeldixon66) for the PR!
 
-## [6.0.0] - 2017-06-30 ##
+## [6.0.0] - 2017-06-30
+
 ### BREAKING CHANGE
+
 - PR #408: Update Mail constructor to signify which parameters are required for sending all email
 - The `Mail()` constructor now requires `$from`, `$subject`, `$to` and `$content` parameters like so: `Mail($from, $subject, $to, $content)`. Those are the minimally required parameters to send an email.
 - Thanks to [Casey Wilson](https://github.com/caseyw) for the PR!
 
-## [5.6.2] - 2017-06-29 ##
+## [5.6.2] - 2017-06-29
+
 ### Fix
+
 - PR #410: Adding name for ReplyTo for issue #390
 - Thanks to [Casey Wilson](https://github.com/caseyw) for the PR!
 
-## [5.6.1] - 2017-06-26 ##
+## [5.6.1] - 2017-06-26
+
 ### Fix
+
 - Versioning mistake (forgot the .0 at the end)
 
-## [5.6.0] - 2017-06-26 ##
+## [5.6.0] - 2017-06-26
+
 ### Added
+
 - Pull #405: Updating docs and non-composer includes
 - Thanks to [Casey Wilson](https://github.com/caseyw) for the PR!
 
-## [5.5.1] - 2017-05-18 ##
+## [5.5.1] - 2017-05-18
+
 ### Fixed
+
 - Pull #396: Use `print_r` instead of `echo` on Arrays
 - Thanks to [Ryan P.C. McQuen](https://github.com/ryanpcmcquen) for the PR!
 
-## [5.5.0] - 2017-05-04 ##
+## [5.5.0] - 2017-05-04
+
 ### Added
+
 - Pull #393: Update [php-http-client](https://github.com/sendgrid/php-http-client) dependency
 - [v3.6](https://github.com/sendgrid/php-http-client/releases/tag/v3.6.0): Pass the curlOptions to the client in buildClient
 - [v3.7](https://github.com/sendgrid/php-http-client/releases/tag/v3.7.0): Added ability to get headers as associative array
 
-## [5.4.2] - 2017-04-18 ##
+## [5.4.2] - 2017-04-18
+
 ### Fixes
+
 - Fixes #292
 - Removes Prism file in sendgrid-php.zip
 
-## [5.4.1] - 2017-04-04 ##
+## [5.4.1] - 2017-04-04
+
 ### Added
+
 - Pull #373
 - PSR1 & PSR2 Conversion
 - Thanks to [Braunson Yager](https://github.com/Braunson) for the PR!
 
-## [5.4.0] - 2017-03-16 ##
+## [5.4.0] - 2017-03-16
+
 ### Added
+
 - Pull #337
 - API level addressing of the string-only custom arg rule
 - Thanks to [Chris Schuld](https://github.com/cbschuld) for the PR!
 
-## [5.3.0] - 2017-03-15 ##
+## [5.3.0] - 2017-03-15
+
 ### Added
+
 - Pull #367
 - UTF8 encoding forced for content value and message subject
 - Thanks to [Chris Schuld](https://github.com/cbschuld) for the PR!
 
-## [5.2.3] - 2017-03-03 ##
+## [5.2.3] - 2017-03-03
+
 ### Fixed
+
 - Pull #334
 - Fixed serialization of empty JSON objects, fixes #332 & #314
 - Thanks to [Matthew Dreyer](https://github.com/Dreyer) for the PR!
 
-## [5.2.2] - 2017-03-03 ##
+## [5.2.2] - 2017-03-03
+
 ### Fixed
+
 - Pull #323
 - Typo 'user' for 'usr'
 - Thanks to [Mike Ralphson](https://github.com/MikeRalphson) for the PR!
 
-## [5.2.1] - 2017-03-01 ##
+## [5.2.1] - 2017-03-01
+
 ### Fixed
+
 - Pull #353
 - Fixed Issue #352
 - Relative path fix for background jobs
 - Thanks to [Tarcísio Zotelli Ferraz](https://github.com/tarcisiozf) for the PR!
 
-## [5.2.0] - 2017-02-23 ##
+## [5.2.0] - 2017-02-23
+
 ### Added
+
 - Pull #346
 - Allow passing curlOptions to the client
 - Thanks to [Taluu](https://github.com/sendgrid/sendgrid-php/pull/346) for the PR!
 
-## [5.1.2] - 2016-10-11 ##
+## [5.1.2] - 2016-10-11
+
 ### Added
+
 - Pull #330, Fixes #320
 - Delete subaccounts returns 200 issue resolved
 - The fix happened at the [php-http-client](https://github.com/sendgrid/php-http-client/releases/tag/v3.5.1) dependency.
 - Thanks to [emil](https://github.com/emilva) for the PR!
 
-## [5.1.1] - 2016-10-11 ##
+## [5.1.1] - 2016-10-11
+
 ### Added
+
 - Pull #307, Fixes #276
 - Adds phpdoc and style fixes
 - Thanks to [Avishkar Autar](https://github.com/aautar) for the PR!
 
-## [5.1.0] - 2016-09-29 ##
+## [5.1.0] - 2016-09-29
+
 ### Fixed
+
 - Pull #295: [Upgrade sendgrid/php-http-client](https://github.com/sendgrid/sendgrid-php/pull/295/files)
 - This adds getters for certain properties, please see [this pull request](https://github.com/sendgrid/php-http-client/pull/9) for details
 - Thanks to [Arjan Keeman](https://github.com/akeeman) for the pull request!
 
-## [5.0.9] - 2016-09-13 ##
+## [5.0.9] - 2016-09-13
+
 ### Fixed
+
 - Pull request #289: [Replace "\jsonSerializable" with "\JsonSerializable" ](https://github.com/sendgrid/sendgrid-php/pull/289)
 - Thanks to [Issei.M](https://github.com/issei-m) for the pull request!
 
-## [5.0.8] - 2016-08-24 ##
+## [5.0.8] - 2016-08-24
+
 ### Added
+
 - Table of Contents in the README
 - Added a [USE_CASES.md](https://github.com/sendgrid/sendgrid-php/blob/master/USE_CASES.md) section, with the first use case example for transactional templates
 
-## [5.0.7] - 2016-07-25 ##
+## [5.0.7] - 2016-07-25
+
 ### Added
+
 - [Troubleshooting](https://github.com/sendgrid/sendgrid-php/blob/master/TROUBLESHOOTING.md) section
 
-## [5.0.6] - 2016-07-20 ##
+## [5.0.6] - 2016-07-20
+
 ### Added
+
 - README updates
 - Update introduction blurb to include information regarding our forward path
 - Update the v3 /mail/send example to include non-helper usage
 - Update the generic v3 example to include non-fluent interface usage
 
-## [5.0.5] - 2016-07-12 ##
+## [5.0.5] - 2016-07-12
+
 ### Added
+
 - Update docs, unit tests and examples to include Sender ID
 
-## [5.0.4] - 2016-07-07 ##
+## [5.0.4] - 2016-07-07
+
 ### Added
+
 - Tests now mocked automatically against [prism](https://stoplight.io/prism/)
 
-## [5.0.3] - 2016-07-05 ##
+## [5.0.3] - 2016-07-05
+
 ### Updated
+
 - Content based on our updated [Swagger/OAI doc](https://github.com/sendgrid/sendgrid-oai)
 
-## [5.0.2] - 2016-07-05 ##
+## [5.0.2] - 2016-07-05
+
 ### Added
-- Accept: application/json header per https://sendgrid.com/docs/API_Reference/Web_API_v3/How_To_Use_The_Web_API_v3/requests.html
+
+- Accept: application/json header per https://sendgrid.com/docs/API_Referen_API_v3/How_To_Use_The_Web_API_v3/requests.html
 
 ### Updated
+
 - Content based on our updated [Swagger/OAI doc](https://github.com/sendgrid/sendgrid-oai)
 
-## [5.0.1] - 2016-06-17 ##
+## [5.0.1] - 2016-06-17
+
 ### Fixed
+
 - Issue with packaged version for non-composer uses
 
-## [5.0.0] - 2016-06-13 ##
+## [5.0.0] - 2016-06-13
+
 ### Added
+
 - Breaking change to support the v3 Web API
 - New HTTP client
 - v3 Mail Send helper
 
-## [v4.0.4] - (2016-02-18) ##
+## [v4.0.4] - (2016-02-18)
+
 ### Added
+
 - Ability to add scopes to API Keys endpoint [POST]
 
-## [v4.0.3] - (2016-02-18) ##
+## [v4.0.3] - (2016-02-18)
+
 ### Added
+
 - API Keys endpoint [PUT]
 
-## [v4.0.2] - (2015-12-15) ##
+## [v4.0.2] - (2015-12-15)
+
 ### Added
+
 - Tests for API Keys endpoint [POST, PATCH, DELETE]
 
-## [v4.0.1] - (2015-12-03) ##
+## [v4.0.1] - (2015-12-03)
+
 ### Fixed
+
 - HTTP 406 Not Acceptable Errors [#177](https://github.com/sendgrid/sendgrid-php/issues/177)
 
-## [v4.0.0] - (2015-10-16) ##
+## [v4.0.0] - (2015-10-16)
+
 ### Added
-- Added support for accessing the [SendGrid Web API v3 endpoints](https://sendgrid.com/docs/API_Reference/Web_API_v3/index.html)
+
+- Added support for accessing the [SendGrid Web API v3 endpoints](https://sendgrid.com/docs/API_Referen_API_v3/index.html)
 - Implemented part of the /api_keys, /groups and /suppressions endpoints
 
-## [v3.2.0] - (2015-05-13) ##
+## [v3.2.0] - (2015-05-13)
 
 ### Added
+
 - Specify Guzzle proxy via [#149](https://github.com/sendgrid/sendgrid-php/pull/149)
 - Option to disable exception raising
 
 ## [v3.1.0] - (2015-04-27)
+
 ### Added
+
 - Support for API keys
 
 ## [v3.0.0] - (2015-04-14)
+
 ### Fixed
+
 - CC and BCC not working with SMTPAPI To
 
 ### Changed
+
 - **Breaking:** A `\SendGrid\Exception` is now raised when response is not 200
 - **Breaking:** `addTo` now uses the Web API parameter as opposed to the SMTPAPI Header. Substitutions will most likely break unless you update to use `addSmtpapiTo`
 - The library now depends on Guzzle3
 - Major refactoring
 
 ### Added
+
 - **Breaking:** `send()` now returns an instance of `\SendGrid\Response`
 - Numerous missing methods for new functionality
 - `addSmtpapiTo` for using the SMTPAPI To
 
 ## [v2.2.1] - (2014-01-29)
+
 ### Fixed
+
 - Fix turn_off_ssl_verification option via [#123](https://github.com/sendgrid/sendgrid-php/pull/123)
 
 ## [v2.2.0] - (2014-01-12)
+
 ### Changed
+
 - Remove [Unirest](https://github.com/Mashape/unirest-php/) and replace with native cURL
 - Add CHANGELOG.md
