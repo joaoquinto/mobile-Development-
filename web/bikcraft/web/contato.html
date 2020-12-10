@@ -4,8 +4,6 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- SEO -->
   <meta name="description" content="Compre a sua bicicleta personalizada. Possuimos bicicletas  passeio, retrô e esporte">
   <!-- Compartilhamento -->
@@ -17,15 +15,8 @@
   <!-- Compartilhamento -->
   <link rel="shortcut icon" href="favicon.ico">
   <!-- SEO -->
-  <!-- Implementa um padrão para tags html e css. -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <!-- Reseta todo o html para ex (margin: 0, padding: 0, border: 0) -->
-  <link rel="stylesheet" href="css/reset.css">
-  <!-- Sistema de grid -->
-  <link rel="stylesheet" href="css/grid.css">
-  <link rel="stylesheet" href="css/style.css"">
-  <link rel=" stylesheet" href="css/contato.css">
-  <link rel=" stylesheet" href="css/responsivo.css"">
+  <link rel="stylesheet" href="css/style.css">
+
   <script>document.documentElement.classList.add('js');</script>
 
   <title>Bikcraft - Contato</title>
@@ -33,21 +24,21 @@
 
 <body>
   <header class=" header">
-  <!-- Container com 960px de largura. Vai segurar todo o conteúdo e limitar o espaçamento-->
-  <div class="container">
-    <a href=" index.html" class="grid-4">
-      <img src="../web/img/bikcraft.svg" alt="Bikcraft Logo">
-    </a>
-    <!--Tags para navegação em um header  -->
-    <nav class="grid-12 header-menu">
-      <ul>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href=" produtos.html">Produtos</a></li>
-        <li><a href=" portfolio.html">Portfólio</a></li>
-        <li><a href="contato.html" class="menu-ativo">Contato</a></li>
-      </ul>
-    </nav>
-  </div>
+    <!-- Container com 960px de largura. Vai segurar todo o conteúdo e limitar o espaçamento-->
+    <div class="container">
+      <a href=" index.html" class="grid-4">
+        <img src="img/bikcraft.svg" alt="Bikcraft Logo">
+      </a>
+      <!--Tags para navegação em um header  -->
+      <nav class="grid-12 header-menu">
+        <ul>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href=" produtos.html">Produtos</a></li>
+          <li><a href=" portfolio.html">Portfólio</a></li>
+          <li><a href="contato.html" class="menu-ativo">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <!-- Titulo -->
   <section class="introducao-interna interna-contato">
@@ -66,9 +57,9 @@
       <input type="email" name="email" id="email" required>
       <label for="telefone">Telefone</label>
       <input type="tel" name="telefone" id="telefone">
-      <label for="nao-aparece" class="nao-aparece">Se você não é um robô, deixe em branco!</label>
+      <label class="nao-aparece">Se você não é um robô, deixe em branco!</label>
       <input type="text" class="nao-aparece" name="leaveblank">
-      <label for="nao-aparece" class="nao-aparece">Se você não é um robô, não mude esse campo!</label>
+      <label class="nao-aparece">Se você não é um robô, não mude esse campo!</label>
       <input type="text" class="nao-aparece" name="dontchange" value="http://">
       <label for="mensagem">Mensagem</label>
       <textarea name="mensagem" id="mensagem" required></textarea>
@@ -76,7 +67,7 @@
     </form>
     <div class="contato-dados grid-8">
       <h3>Dados</h3>
-      <span><a href="tel:21 99999-9999">+55 21 99999-9999</a></span>
+      <span><a href="tel:2199999-9999">+55 21 99999-9999</a></span>
       <span>orçamento@bikcraft.com</span>
       <span>Rua Ali Perto - Botafogo</span>
       <span>Rio de Janeiro - Brasil</span>
@@ -84,29 +75,29 @@
       <ul>
         <li>
           <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-            <img src="../web/img/redes-sociais/facebook.svg" alt="Bikcraft Facebook">
+            <img src="img/redes-sociais/facebook.svg" alt="Bikcraft Facebook">
           </a>
         </li>
         <li>
           <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-            <img src="../web/img/redes-sociais/instagram.svg" alt="Bikcraft Instagram">
+            <img src="img/redes-sociais/instagram.svg" alt="Bikcraft Instagram">
           </a>
         </li>
         <li>
           <a href="https://twitter.com/login?lang=pt" target="_blank" rel="noopener noreferrer">
-            <img src="../web/img/redes-sociais/twitter.svg" alt="Bikcraft Twiter">
+            <img src="img/redes-sociais/twitter.svg" alt="Bikcraft Twiter">
           </a>
         </li>
       </ul>
     </div>
   </section>
-  <section class="container contato-mapa fadeInDown" data-anime="1600">
+  <div class="container contato-mapa fadeInDown" data-anime="1600">
     <a href=" http://google.com" target="_blank" rel="noopener noreferrer" class="grid-16">
-      <img src="../web/img/endereco-bikcraft.jpg" alt="Endereço Bikcraft">
+      <img src="img/endereco-bikcraft.jpg" alt="Endereço Bikcraft">
     </a>
-  </section>
+  </div>
   <!-- Quebra/Citação -->
-  <section class="quebra">
+  <div class="quebra">
     <blockquote class="quote-externo container">
       <p>
         "o verdadeiro segredo da felicidade está em ter um genuíno interesse por todos os detalhes da vida cotidiana."
@@ -114,7 +105,7 @@
       <!-- Serve para informar quem citou a frase -->
       <cite>William Morrins</cite>
     </blockquote>
-  </section>
+  </div>
   <!-- Footer -->
   <footer>
     <div class="footer">
@@ -128,7 +119,7 @@
         <div class="grid-4 footer-contato">
           <h3>Contato</h3>
           <ul>
-            <li><a href="tel:21 99999-9999">- 21 99999-9999</a></li>
+            <li><a href="tel:2199999-9999">- 21 99999-9999</a></li>
             <li>- contato@bikcraft.com</li>
             <li><a href="https://goo.gl/maps/B5h6zorZLsCSGBJw8" target="_blank" rel="noopener noreferrer">- Botafogo - RJ</a></li>
           </ul>
@@ -138,17 +129,17 @@
           <ul>
             <li>
               <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                <img src="../web/img/redes-sociais/facebook.svg" alt="Bikcraft Facebook">
+                <img src="img/redes-sociais/facebook.svg" alt="Bikcraft Facebook">
               </a>
             </li>
             <li>
               <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-                <img src="../web/img/redes-sociais/instagram.svg" alt="Bikcraft Instagram">
+                <img src="img/redes-sociais/instagram.svg" alt="Bikcraft Instagram">
               </a>
             </li>
             <li>
               <a href="https://twitter.com/login?lang=pt" target="_blank" rel="noopener noreferrer">
-                <img src="../web/img/redes-sociais/twitter.svg" alt="Bikcraft Twiter">
+                <img src="img/redes-sociais/twitter.svg" alt="Bikcraft Twiter">
               </a>
             </li>
           </ul>
@@ -163,9 +154,9 @@
       </div>
     </div>
   </footer>
-  <script src="../web/js/simple-anime.js"></script>
-  <script src="../web/js/simple-form.js"></script>
-  <script src="../web/js/script.js"></script>
-  </body>
+  <script src="js/simple-anime.js"></script>
+  <script src="js/simple-form.js"></script>
+  <script src="js/script.js"></script>
+</body>
 
 </html>
