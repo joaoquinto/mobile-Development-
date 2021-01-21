@@ -1,0 +1,114 @@
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* ClearFix do container
+   Impede que o elemento pai
+    ignore a altura dos elementos filhos
+*/
+.container::after,
+.container::before {
+  content: "";
+  /* limpa a flutução dos elementos que estiverem com float. */
+  clear: both;
+  display: table;
+}
+
+.grid-1,
+.grid-2,
+.grid-3,
+.grid-4,
+.grid-5,
+.grid-6,
+.grid-7,
+.grid-8,
+.grid-9,
+.grid-10,
+.grid-11,
+.grid-12 {
+  /* Gutter */
+  margin-left: 10px;
+  margin-right: 10px;
+  /* Para todo elemento flutuar a esquerda */
+  float: left;
+  /* Para colocar margin mesmo em elementos inline */
+  display: block;
+  /* Pôe 1px de altura no grid para ele aparecer mesmo sem conteúdo */
+  min-height: 1px;
+}
+
+.grid-1 {
+  width: calc(8.333% - 20px);
+}
+
+.grid-2 {
+  width: calc(16.666% - 20px);
+}
+
+.grid-3 {
+  width: calc(25% - 20px);
+}
+
+.grid-4 {
+  width: calc(33.333% - 20px);
+}
+
+.grid-5 {
+  width: calc(41.666% - 20px);
+}
+
+.grid-6 {
+  width: calc(50% - 20px);
+}
+
+.grid-7 {
+  width: calc(58.333% - 20px);
+}
+
+.grid-8 {
+  width: calc(66.666% - 20px);
+}
+
+.grid-9 {
+  width: calc(75% - 20px);
+}
+
+.grid-10 {
+  width: calc(83.333% - 20px);
+}
+
+.grid-11 {
+  width: calc(91.666% - 20px);
+}
+
+.grid-12 {
+  width: calc(100% - 20px);
+}
+
+@media (max-width: 739px) {
+  .container {
+    max-width: 300px;
+  }
+
+  .grid-1,
+  .grid-2,
+  .grid-3,
+  .grid-4,
+  .grid-5,
+  .grid-6,
+  .grid-7,
+  .grid-8,
+  .grid-9,
+  .grid-10,
+  .grid-11,
+  .grid-12 {
+    /* Faz o objeto com o grid ocupar 100% do seu espaço */
+    width: 100%;
+    /* retira o Gutter */
+    margin-left: 0px;
+    margin-right: 0px;
+    /* Para todo elemento não flutuar a esquerda */
+    float: none;
+  }
+}
