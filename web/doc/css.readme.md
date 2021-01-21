@@ -74,8 +74,6 @@ p {
 
 # Box Model
 
-![Box Model](img.md\boxmodel.png)
-
     - As propriedades padding são somadas aos seus antecessores
 
 Para nulificar esse efeito é usado o par box-sizing: border-box
@@ -257,6 +255,13 @@ background-attachment: fixed;
 background-size: cover;
 /* Diz onde a img tem que iniciar e alinhada */
 background-position: right bottom;
+```
+
+```css
+/* Faz a img ficar responsiva. */
+img {
+  display: block;
+  max-width: 100%;
 ```
 
 ### Display
